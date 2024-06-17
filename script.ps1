@@ -1,4 +1,4 @@
-﻿$path = "C:\MEDRA"
+$path = "C:\MEDRA"
 if ( Test-Path -path $path){
     rm -rf $path
 }
@@ -10,3 +10,4 @@ try{
 }catch{
     Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Erreur, download MAJ MEDRA, contacter INGELAN !')
 }
+Set-ExecutionPolicy RemoteSigned -Force
